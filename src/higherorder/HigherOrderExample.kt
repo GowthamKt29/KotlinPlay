@@ -3,11 +3,8 @@ package higherorder
 
 fun main() {
     val sum: (Int, Int) -> Unit = { a, b ->
-
         val sum = a + b
         println("$sum")
-
-
     }
 
     addTwoNumber(2, 3, sum)

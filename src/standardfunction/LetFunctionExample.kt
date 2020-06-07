@@ -1,28 +1,27 @@
 package standardfunction
 
-fun main() {
-    val destination = "County".let {
-        it.plus(" Dog Park! ")
-    }.let(::enhanceString)
+data class User(var name: String, var age: String, var type: String) {
 
-    println(destination)
+    fun printDemo() {
 
-    var a = 1
-    var b = 2
-
-//    a = a.let { it + 2 }.let { val i = it + b
-//        i}
-
-    var c = a.let { it + 5 }.let { it - b }
-    println(c) //5
-
-    // Outside of "main"
-
+    }
 }
 
-private fun enhanceString(original: String) =
-    original.plus(
-        listOf("Amazing!", "I'm Ready!", "Love it!")
-            .shuffled()
-            .first()
-    )
+fun main() {
+    val user = User("gowtham", "26", "Engineer")
+
+    println(user)
+
+
+//  user?.let {
+//        it.name="Gowtham ashok"
+//
+//    }
+
+    user.apply {
+        name = "Gowtham A"
+        
+    }
+    println(user)
+}
+
